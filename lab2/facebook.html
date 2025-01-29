@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-color: rgb(239, 242, 245);
+        }
+        .authentication {
+            font-size: 24px;
+            font-family: helvetica;
+            padding: 15px;
+            position: absolute;
+            right: 240px;
+            top: 210px;
+            background-color: white;
+            width: 400px;
+            text-align: center;
+            border-radius: 6px;
+        }
+        .authentication input {
+            font-size: 18px;
+            border-radius: 6px;
+            width: 94.5%;
+            border: none;
+            margin-bottom: 10px;
+        }
+        #login, #password {
+            padding: 10px;
+            font-size: 20px;
+            border: 1px solid rgb(160, 159, 159);
+            opacity: 70%;
+        }
+        #enter, #create-acc {
+            font-weight: 500;
+            padding: 10px;
+            font-size: 24px;
+            border-radius: 6px;
+            color: white;
+            background-color: rgb(26, 119, 242);
+            width: 100%;
+            border: none; 
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        #create-acc {
+            background-color: rgb(66, 183, 41);
+            width: auto;
+            position: relative;
+            margin-top: 15px;
+        }
+        #create-acc:hover, #enter:hover {
+            opacity: 70%;
+        }
+        #facebook_logo {
+            position: absolute;
+            top: 250px;
+            left: 250px;
+        }
+        #text {
+            font-size: 28px;
+            font-family: helvetica;
+            position: absolute;
+            top: 290px;
+            left: 250px;
+        }
+        #forget-password, #create-acc {
+            text-decoration: none;
+            color: rgb(26, 119, 242);
+            font-size: 15px;
+            cursor: default;
+            display: block;
+            margin-top: 15px;
+        }
+        #forget-password:hover, #create-acc:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Facebook_Logo_%282019%29.svg" 
+    width="250px" id="facebook_logo">
+
+    <p id="text">
+        Facebook помогает вам всегда <br>оставаться на связи и общаться со <br>своими знакомыми.
+    </p>
+
+    <div class="authentication">
+        <input id="login" type="text" placeholder="Электронный адрес или номер телефона" ><br>
+        <input id="password" type="password" placeholder="Пароль" ><br>
+        <input class="authentication-buttons" id="enter" type="button" value="Вход">
+        <a id="forget-password" href="#" onclick="return false;">Забыли пароль?</a>
+        <hr>
+        <input class="authentication-buttons" id="create-acc" type="button" value="Создать новый аккаунт" onclick="return false;">
+    </div>
+</body>
+</html>
