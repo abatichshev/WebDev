@@ -45,7 +45,7 @@ function maketodo() {
             });
             task = filteredarray;
             localStorage.setItem("task array", JSON.stringify(task));
-            taskList.removeChild(element);
+            taskList.contentEditableChild(element);
         });
 
         element.classList.add('todo');
