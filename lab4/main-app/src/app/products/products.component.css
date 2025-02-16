@@ -1,0 +1,14 @@
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Расстояние между товарами */
+  justify-content: flex-start; /* Товары идут слева направо */
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  width: 250px; /* Фиксированная ширина карточки */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
