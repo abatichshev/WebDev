@@ -1,0 +1,15 @@
+<div class="products-container">
+  <div class="product-card" *ngFor="let goods of products">
+    <h2><a class="items" href="{{ goods.productLink }}" target="_blank">{{ goods.name }}</a></h2>
+    <p>{{ goods.description }}</p>
+    <p>Цена: {{ goods.price }}₸</p>
+    <p>Рейтинг: {{ goods.rating }}</p>
+    <p>Лайков: {{ goods.likes }}</p>
+    
+    <img [src]="goods.imageUrl" alt="{{ goods.name }}" class="product-image">
+    
+    <button (click)="sharing(goods.id)">🔗 Поделиться</button>
+    <button (click)="likeItem(goods.id)">❤️ Лайк</button>
+    <button (click)="removeItem(goods.id)">❌ Удалить</button>
+  </div>
+</div>

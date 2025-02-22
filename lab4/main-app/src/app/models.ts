@@ -1,20 +1,12 @@
 export class Item {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  imageLink: string;
-  rating: number;
-  productLink: string;
-  constructor(id: number, name: string, description: string, price: number, imageLink: string, rating: number, productLink: string) {
-    this.id = id;
-    this.name = name;
-    this.description = description;
-    this.price = price;
-    this.imageLink = imageLink;
-    this.rating = rating;
-    this.productLink = productLink;
-  }
+  constructor(
+    public id: number,
+    public name: string,
+    public description: string,
+    public price: number,
+    public imageUrl: string,
+    public rating: number,
+    public productLink: string, // Исправлено название
+    public likes: number = 0 // Добавлено свойство likes
+  ) {}
 }
-
-

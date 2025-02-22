@@ -1,11 +1,6 @@
-<div class="products-container">
-  <div class="product-card" *ngFor="let goods of products">
-    <h2><a class="items" href="{{goods.productLink}}">{{ goods.name }}</a></h2>
-    <p>{{ goods.description }}</p>
-    <p>Price: ${{ goods.price }}</p>
-    <p>Rating: {{goods.rating}}</p>
-    <app-image-gallery></app-image-gallery>
-    <button type="button" (click)="sharing(goods.id)">Share</button>
-    
-  </div>
+<div *ngFor="let product of filterProducts()">
+  <p>{{ product.name }} - 💰 {{ product.price }} - ⭐ {{ product.rating }}</p>
+  <button (click)="removeItem(product.id)">🗑 Удалить</button>
+  <button (click)="likeItem(product.id)">❤️ {{ product.likes }}</button>
+  <button (click)="sharing(product.id)">🔗 Поделиться</button>
 </div>
