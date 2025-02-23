@@ -1,0 +1,38 @@
+<div class="categories" *ngFor="let category of categories; let i = index">
+  <div class="category">
+    <h2>
+      <input type="checkbox" id="checkbox{{ i }}" [(ngModel)]="categoryVisibility[category]">
+      <label for="checkbox{{ i }}" class="labels">{{ category }}</label>
+    </h2>
+  </div>
+
+  <div *ngIf="categoryVisibility[category]">
+    <div class="products" *ngFor="let goods of getProductsForCategory(category)">
+      <div class="text">
+        <h2>
+          <a class="items" href="{{ goods.productLink }}">{{ goods.name }}</a>
+          <p>Likes:</p>
+          <span id="likes">{{ goods.likes }}</span>
+        </h2>
+        
+        <p>{{ goods.description }}</p>
+        <img class="products-image" src="{{ goods.imageLink }}" alt="{{ goods.name }}">
+        
+        <div class="text">
+          <p class="priceRating">Price: ${{ goods.price }}</p>
+          <p class="priceRating">Rating: {{ goods.rating }}</p>
+        </div>
+        
+        <button type="button" (click)="sharing(goods.id)" class="buttons">SHARE</button>
+        
+        <button type="button" (click)="removeProduct(goods.category, goods.id)" class="extra-buttons-delete">
+          🛒
+        </button>
+        
+        <button type="button" (click)="incrementLike(goods)" class="extra-buttons-likes">
+          ❤️
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
