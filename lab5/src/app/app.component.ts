@@ -13,3 +13,4 @@ import {ProductCategoryComponent} from "./product-category/product-category.comp
 export class AppComponent {
   title = 'Lab4';
 }
+  

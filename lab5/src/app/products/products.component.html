@@ -32,6 +32,9 @@
         <button type="button" (click)="incrementLike(goods)" class="extra-buttons-likes">
           ❤️
         </button>
+        <button type ="button" (click)="toggleFavourite(goods)" class = "fav-button">
+        {{goods.isFavorite ? 'Unfavorite': 'Favorite'}}
+        </button>
       </div>
     </div>
   </div>

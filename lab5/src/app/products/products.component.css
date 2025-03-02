@@ -1,104 +1,46 @@
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
   gap: 15px;
-  margin-bottom: 20px;
-}
-
-.category {
-  background-color: #fff;
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.category:hover {
-  background-color: #e0e0e0;
-}
-
-.labels {
-  margin-left: 5px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.products {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 500px;
-  margin-bottom: 20px;
+}
+
+.product-item {
+  width: 220px; 
+  height: 260px; 
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
- 
-}
-  
-
-.products-image {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 8px;
-  margin-top: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.items {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
+.product-item img {
+  width: 100%; 
+  max-width: 150px; 
+  height: 150px; 
+  object-fit: cover; 
+  border-radius: 8px; 
 }
 
-.items:hover {
-  text-decoration: underline;
-}
 
-.priceRating {
+.product-item h3 {
   font-size: 16px;
-  font-weight: bold;
   margin: 5px 0;
 }
 
-.buttons {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
+.product-item p {
+  font-size: 14px;
+  color: #666;
 }
 
-.buttons:hover {
-  background-color: #0056b3;
-}
-
-.extra-buttons-delete,
-.extra-buttons-likes {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.extra-buttons-delete img,
-.extra-buttons-likes img {
-  width: 24px;
-  transition: transform 0.3s;
-}
-
-.extra-buttons-delete:hover img,
-.extra-buttons-likes:hover img {
-  transform: scale(1.1);
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
